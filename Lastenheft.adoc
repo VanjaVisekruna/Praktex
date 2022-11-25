@@ -20,7 +20,7 @@ image::uml.png[]
 Die Seriosität der Anbieter kann nicht garantiert werden
 
 == Gesamtsystemarchitektur
-image::Systemarchitektur.png[Systemarchitektur]
+image::Systemarchitektur.PNG[Systemarchitektur]
 
 == Anforderungen an die Funktionssicherheit
  * 2 Faktor Authentifikation Sicherheit
