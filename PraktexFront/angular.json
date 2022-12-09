@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "../PraktexFront/node_modules/bulma/css/bulma.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
