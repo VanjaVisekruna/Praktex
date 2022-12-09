@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PraktService} from "../services/prakt/prakt.service";
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  prakts:String[] = []
+
+  constructor(private praktService:PraktService) {
+  }
+
+  ngOnInit(): void{
+    this.prakts = this.praktService.getAll();
+  }
 }
