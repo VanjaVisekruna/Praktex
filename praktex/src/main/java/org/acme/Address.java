@@ -10,24 +10,22 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "User")
+@Table(name = "Address")
 @Getter
 @Setter
-public class User {
+public class Address {
     @Id
-    private UUID id;
+    public UUID id;
 
-    public String name;
-    public String email;
-    private String password;
-
-    @ManyToOne(fetch =  FetchType.LAZY)
-    public Address address;
+    private String street;
+    private String hNumber;
+    private String city;
+    public String district;
 
     @OneToMany(
-            mappedBy = "User",
+            mappedBy = "Address",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    public List<Internship> internships = new ArrayList<>();
+    public List<User> user = new ArrayList<>();
 }
