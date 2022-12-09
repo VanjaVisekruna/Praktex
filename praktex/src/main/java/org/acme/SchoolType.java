@@ -1,5 +1,6 @@
 package org.acme;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,13 +14,11 @@ import java.util.UUID;
 @Table(name = "SchoolType")
 @Getter
 @Setter
-public class SchoolType {
-    @Id
-    public UUID id;
+public class SchoolType extends PanacheEntity {
     public String type;
 
     @OneToMany(
-            mappedBy = "SchoolType",
+            mappedBy = "schoolType",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

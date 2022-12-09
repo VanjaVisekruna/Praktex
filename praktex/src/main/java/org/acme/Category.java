@@ -1,5 +1,6 @@
 package org.acme;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,18 +15,16 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class Category {
-    @Id
-    public UUID id;
+public class Category extends PanacheEntity {
     public String name;
 
     @OneToMany(
-            mappedBy = "Category",
+            mappedBy = "category",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
     public List<Internship> internships = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "Category")
+    @ManyToMany(mappedBy = "category")
     List<SearchAgent> searchAgents;
 }

@@ -1,5 +1,6 @@
 package org.acme;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,9 +14,7 @@ import java.util.UUID;
 @Table(name = "Address")
 @Getter
 @Setter
-public class Address {
-    @Id
-    public UUID id;
+public class Address extends PanacheEntity {
 
     private String street;
     private String hNumber;
@@ -23,7 +22,7 @@ public class Address {
     public String district;
 
     @OneToMany(
-            mappedBy = "Address",
+            mappedBy = "address",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

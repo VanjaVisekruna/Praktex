@@ -1,5 +1,6 @@
 package org.acme;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,16 +13,14 @@ import java.util.UUID;
 @Getter
 @Setter
 
-public class Internship {
-    @Id
-    public UUID id;
+public class Internship extends PanacheEntity {
     public String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
     public User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    public InternshipType type;
+    public InternshipType internshipType;
 
     @ManyToOne(fetch = FetchType.LAZY)
     public SchoolType schoolType;

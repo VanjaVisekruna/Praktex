@@ -1,5 +1,6 @@
 package org.acme;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,9 +14,7 @@ import java.util.UUID;
 @Table(name = "SearchAgent")
 @Getter
 @Setter
-public class SearchAgent {
-    @Id
-    public UUID id;
+public class SearchAgent extends PanacheEntity {
     public String email;
 
     @ManyToMany
@@ -23,6 +22,6 @@ public class SearchAgent {
             joinColumns = @JoinColumn(name = "searchagent_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    public List<Category> categoryList = new ArrayList<>();
+    public List<Category> category = new ArrayList<>();
 
 }
