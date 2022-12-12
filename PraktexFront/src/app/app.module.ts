@@ -18,6 +18,7 @@ import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
