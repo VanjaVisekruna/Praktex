@@ -6,28 +6,19 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.awt.image.BufferedImage;
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "User")
+@Table(name = "InternshipType")
 @Getter
 @Setter
-@ToString
-public class User extends PanacheEntity {
-    public String name;
-    public String email;
-    public String password;
-    //public Blob image;
-
-    @ManyToOne(fetch =  FetchType.LAZY)
-    public Address address;
+public class InternshipType extends PanacheEntity {
+    public String description;
 
     @OneToMany(
-            mappedBy = "user",
+            mappedBy = "internshipType",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

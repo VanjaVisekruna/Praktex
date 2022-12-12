@@ -1,0 +1,17 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex="25">
+
+    <form #usersForm="ngForm" (ngSubmit)="getUserFromData(usersForm.value)" fxLayoutAlign="strech" class="example-form" fxLayout="column">
+      <mat-toolbar color ="primary">LoginPage</mat-toolbar>
+      <mat-form-field>
+        <input #box ngModel placeholder="Username" name="username">
+      </mat-form-field>
+      <mat-form-field>
+        <input #box2 ngModel matInput type ="password" placeholder="Password" name = "password">
+      </mat-form-field>
+      <button (click)="getUserName(box.value)" (click)="getPassword(box2.value)" mat-button type="submit">Login</button>
+    </form>
+
+  </mat-card>
+</div>
+
