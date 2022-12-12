@@ -16,7 +16,7 @@ import {MatCardModule} from "@angular/material/card";
 import { SearchComponent } from './search/search.component';
 
 import { LoginComponent } from './login/login.component';
-//import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from "@angular/common/http";
@@ -31,7 +31,8 @@ import {FormsModule} from "@angular/forms";
     MenuComponent,
     NavbarComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent
   ],
     // imports: [
     //     BrowserModule,
@@ -57,7 +58,7 @@ import {FormsModule} from "@angular/forms";
     MatIconModule,
     AppRoutingModule,
     MatCardModule,
-    //FlexLayoutModule,
+    FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
