@@ -1,0 +1,45 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "UserName": "SIUU",
+      "Password": "HEHHEHE"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "username": "xaxsxsax",
+      "password": "xasxasxas",
+      "id": 4
+    },
+    {
+      "username": "Lionel Messi",
+      "password": "Goat",
+      "id": 5
+    },
+    {
+      "username": "Lionel Messi",
+      "password": "Goat",
+      "id": 6
+    },
+    {
+      "username": "Lionel Messi",
+      "password": "Goat",
+      "id": 7
+    },
+    {
+      "username": "Cristiano",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "username": "dwdwdwdw",
+      "password": "http://localhost:3000/Userswfeafeafae",
+      "id": 9
+    }
+  ]
+}
