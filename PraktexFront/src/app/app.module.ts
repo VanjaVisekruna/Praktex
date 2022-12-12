@@ -13,7 +13,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from "@angular/material/card";
-
+import {RatingModule} from "ng-starrating";
+import { SearchComponent } from './search/search.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import {MatCardModule} from "@angular/material/card";
     AppComponent,
     MenuComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
     imports: [
         BrowserModule,
@@ -30,7 +33,9 @@ import {MatCardModule} from "@angular/material/card";
         MatButtonModule,
         MatIconModule,
         AppRoutingModule,
-        MatCardModule
+        MatCardModule,
+      RatingModule,
+      FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
