@@ -12,8 +12,8 @@ export class PraktService {
     return [
       {
         id: 1,
-        name: 'Pizza Pepperoni',
-        cookTime: '10-20',
+        name: 'Dynatrace',
+        cookTime: '4 weeks',
         price: 10,
         favorite: false,
         origins: ['italy'],
@@ -23,9 +23,9 @@ export class PraktService {
       },
       {
         id: 2,
-        name: 'Meatball',
+        name: 'Industrieinformatik',
         price: 20,
-        cookTime: '20-30',
+        cookTime: '8 weeks',
         favorite: true,
         origins: ['persia', 'middle east', 'china'],
         stars: 4.7,
@@ -34,9 +34,9 @@ export class PraktService {
       },
       {
         id: 3,
-        name: 'Hamburger',
+        name: 'Metalex',
         price: 5,
-        cookTime: '10-15',
+        cookTime: '4 weeks',
         favorite: false,
         origins: ['germany', 'us'],
         stars: 3.5,
