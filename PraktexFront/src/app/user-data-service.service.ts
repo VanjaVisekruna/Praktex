@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class UserDataServiceService {
-  url ='http://localhost:3000/users'
+  url ='http://localhost:8080/users/add'
 
   constructor(private http: HttpClient) { }
   users(){
